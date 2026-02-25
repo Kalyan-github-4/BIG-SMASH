@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BUG SMASH — CYBERPUNK EDITION</title>
+<link rel="stylesheet" href="style.css">
+<style>
+ 
+</style>
+</head>
+<body>
+
+<!-- START OVERLAY -->
+<div class="overlay" id="startOverlay">
+  <div class="overlay-title">BUG<br><span style="color:var(--cyan);text-shadow:var(--glow-cyan)">SMASH</span></div>
+  <div class="overlay-stats">
+    <div class="stat-line">SMASH CYBER-BUGS BEFORE THEY CORRUPT THE GRID</div>
+    <div class="stat-line" style="margin-top:8px">🟦 STANDARD <span style="color:#555">·</span> 🔺 RARE (+3x) <span style="color:#555">·</span> ⚡ SPEED (+2x)</div>
+    <div class="stat-line">MISSES BREAK YOUR COMBO</div>
+    <div class="hi-score-line" id="startHiScore" style="margin-top:8px"></div>
+  </div>
+  <button class="btn" onclick="startGame()"><span>INITIALIZE</span></button>
+</div>
+
+<!-- GAME OVER OVERLAY -->
+<div class="overlay hidden" id="gameOverOverlay">
+  <div class="overlay-title">GAME<br><span style="color:var(--pink)">OVER</span></div>
+  <div class="overlay-stats">
+    <div class="stat-line">FINAL SCORE <strong id="finalScore">0</strong></div>
+    <div class="stat-line">BUGS SMASHED <strong id="finalHits">0</strong></div>
+    <div class="stat-line">ACCURACY <strong id="finalAcc">0%</strong></div>
+    <div class="hi-score-line" id="hiScoreLine"></div>
+  </div>
+  <button class="btn" onclick="startGame()"><span>RETRY</span></button>
+</div>
+
+<div class="wrapper">
+  <div>
+    <div class="title">BUG<span> SMASH</span></div>
+    <div class="subtitle">CYBERPUNK EXTERMINATOR v2.077</div>
+  </div>
+
+  <div class="hud">
+    <div class="hud-item">
+      <div class="hud-label">SCORE</div>
+      <div class="hud-value" id="scoreDisplay">0</div>
+    </div>
+    <div class="hud-item">
+      <div class="hud-label">TIME</div>
+      <div class="hud-value" id="timeDisplay" style="color:var(--pink);text-shadow:var(--glow-pink)">30</div>
+    </div>
+    <div class="hud-item">
+      <div class="hud-label">COMBO</div>
+      <div class="hud-value" id="comboDisplay">x1</div>
+    </div>
+  </div>
+
+  <div class="timer-bar-wrap">
+    <div class="timer-bar" id="timerBar"></div>
+  </div>
+
+  <div class="combo-strip" id="comboStrip">COMBO STREAK!</div>
+
+  <div class="grid" id="grid">
+    <!-- 9 cells -->
+  </div>
+
+  <div style="font-size:0.6rem;letter-spacing:0.3em;color:#0d2535;text-align:center">
+    SYS://CLICK OR TAP TO SMASH BUGS
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
